@@ -15,7 +15,7 @@ for(let i=0;i <botoes.length;i++){
 }
 
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2024-10-05T00:00:00");
+const tempoObjetivo1 = new Date("2010-10-05T00:00:00");
 const tempoObjetivo2 = new Date("2024-12-05T00:00:00");
 const tempoObjetivo3 = new Date("2024-12-30T00:00:00");
 const tempoObjetivo4 = new Date("2025-02-01T00:00:00");
@@ -35,7 +35,12 @@ function calculaTempo(tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
     
-    return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+    if (tempoFinal > 0){
+        return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+    } else {
+        return "Prazo Finalizado";
+    }
+
 }
 
 function atualizaCronometro(){
